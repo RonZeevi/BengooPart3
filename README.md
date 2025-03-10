@@ -40,7 +40,7 @@
 ## Screenshots and Page Descriptions
 
 ### Homepage
-![Homepage](static/media/img/screenshots/homepage.png)
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/1d92bb38-bc6b-49ec-ba4e-e17ad8e8beb2" />
 The homepage displays the system logo and allows role selection and registration/login.
 
 ### Registration Page

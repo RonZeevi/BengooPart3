@@ -40,39 +40,48 @@
 ## Screenshots and Page Descriptions
 
 ### Homepage
-![Homepage](static/media/img/screenshots/homepage.png)
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/1d92bb38-bc6b-49ec-ba4e-e17ad8e8beb2" />
+
 The homepage displays the system logo and allows role selection and registration/login.
 
 ### Registration Page
-![Registration Page](static/media/img/screenshots/signup.png)
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/18c81db9-11c2-4f63-be9f-7ad9d0e32f13" />
+
 Registration page with fields for personal information and role selection.
 
 ### Login Page
-![Login Page](static/media/img/screenshots/login.png)
+<img width="958" alt="image" src="https://github.com/user-attachments/assets/d7a5ff20-bcc2-40c4-9333-7c4b38cde1f7" />
+
 Login page for registered users.
 
 ### User Profile
-![User Profile](static/media/img/screenshots/profile.png)
+<img width="941" alt="image" src="https://github.com/user-attachments/assets/74a53b6a-ff9b-43c3-a220-0f4efac24c94" />
+
 The profile page displays user details and their course list.
 
 ### Course Selection
-![Course Selection](static/media/img/screenshots/selectcourse.png)
+<img width="954" alt="image" src="https://github.com/user-attachments/assets/9d8ff55d-2158-4119-8345-3f27e63ceece" />
+
 Page for selecting a course from the list of courses available to the user.
 
 ### Course Access Management
-![Course Access Management](static/media/img/screenshots/courseaccess.png)
+<img width="940" alt="image" src="https://github.com/user-attachments/assets/d09cd58b-5193-475b-a171-d9c5f8d7c84d" />
+
 Page that allows lecturers to manage course access (add/remove students).
 
 ### AI Chat
-![AI Chat](static/media/img/screenshots/chat.png)
+<img width="939" alt="image" src="https://github.com/user-attachments/assets/5a6b6773-a493-4a3b-b781-9b68ece2f41c" />
+
 Smart chat interface based on Gemini API for course-related questions and answers.
 
 ### Change Password
-![Change Password](static/media/img/screenshots/changepassword.png)
+<img width="952" alt="image" src="https://github.com/user-attachments/assets/e4765ccc-89f2-4051-ab8c-f251e417a66c" />
+
 Page for changing the user's password.
 
 ### About
-![About](static/media/img/screenshots/aboutus.png)
+<img width="953" alt="image" src="https://github.com/user-attachments/assets/4e814ac1-da72-4eb9-b6f8-b9ef4b8ad5a4" />
+
 Page displaying information about the developers and the project.
 
 ## Installation and Operation Instructions

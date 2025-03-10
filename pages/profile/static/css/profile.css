@@ -170,7 +170,6 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    padding-right: 80px;
 }
 
 .course-name {
@@ -183,12 +182,13 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    width: 100%;
 }
 
 .course-lecturer {
     font-size: 0.9rem;
     color: #555;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 .has-manage-button .course-lecturer {
@@ -239,11 +239,9 @@
     font-weight: bold;
     cursor: pointer;
     text-align: center;
-    width: 40%;
-    min-width: 80px;
-    margin-top: 10px;
-    position: relative;
-    left: 60%;
+    width: 120px;
+    margin-top: 5px;
+    align-self: flex-end;
 }
 
 

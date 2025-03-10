@@ -23,6 +23,13 @@
 
 ## Website Flow
 
+| Role | Username | Password |
+|------|----------|----------|
+| Student | ronzeev | 123123Ab! |
+| Lecturer | arseniy | 123123Ab!! |
+
+These example accounts can be used to test the system without creating new users.
+
 ### For New Users:
 1. Enter the homepage
 2. Choose a role (student/lecturer)

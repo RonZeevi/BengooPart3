@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Profile' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('profile.static', filename='css/profile.css') }}"/>
+{% endblock %}
+
+{% block page_body_whitecontainer_content %}
+    <div class="uppercontainer">
+        <h1 class="profile-title">My Profile</h1>
+    </div>
+{% endblock %}
+
+{% block page_body_innercontainer %}
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-image">
+                <img src="static/media/img/Student Profile.jpg" alt="Profile Picture">
+            </div>
+            <div class="profile-name">
+                <h2>{{ user.fullname }}</h2>
+            </div>
+        </div>
+        
+        <div class="profile-details">
+            <div class="details-section">
+                <h3 class="section-title">Personal Details</h3>
+                <div class="detail-item">
+                    <span class="detail-label">Username:</span>
+                    <span class="detail-value">{{ user.username }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Email:</span>
+                    <span class="detail-value">{{ user.email }}</span>
+                </div>
+            </div>
+            
+            <div class="details-section">
+                <h3 class="section-title">My Courses</h3>
+                {% if courses and courses|length > 0 %}
+                    <div class="courses-list">
+                        {% for course in courses %}
+                            <div class="course-item">
+                                <div class="course-info">
+                                    <h4 class="course-name">{{ course.name }}</h4>
+                                </div>
+                                <div class="course-details">
+                                    <p class="course-lecturer">Lecturer: {% if course.lecturer_title %}{{ course.lecturer_title }} {% endif %}{{ course.lecturer }}</p>
+                                    {% if course.is_lecturer %}
+                                        <button class="manage-access-btn" data-course-id="{{ course.course_id }}">Manage Course</button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="no-courses">You haven't enrolled in any courses yet</p>
+                {% endif %}
+            </div>
+        </div>
+        
+        <div class="profile-actions">
+            <button class="change-password-btn">Change Password</button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('profile.static', filename='js/profile.js') }}"></script>
+{% endblock %}

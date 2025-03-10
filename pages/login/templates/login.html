@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Login' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('login.static', filename='css/login.css') }}"/>
+{% endblock %}
+{% block page_body_whitecontainer_content %}
+    <div class="CamelAvater"><img src="static/media/img/Camel avater 2 study position.jpg"/></div>
+        <div class="uppercontainer">
+            <div class="BGUlogo"><img src="static/media/img/BENGOO.png"/></div>
+            <h1 class="login-title">Login</h1>
+        </div>
+{% endblock %}
+
+{% block page_body_innercontainer %}
+            <form class="FormDesign" action="/login" method="post">
+                <h1 class="username-title">username</h1>
+                <input class="input-field" name="username" type="text" required>
+
+                <div class="password-field-container">
+                    <h1 class="password-title">password</h1>
+                    <input class="input-field" type="password" name="password" required>
+                    <button type="button" class="passvisibility">
+                        <img src="{{ url_for('static', filename='media/img/hide.png') }}"/>
+                    </button>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <a href="" class="hyperlink" target="_blank">Forgot password?</a>
+            
+            {% if error %}
+            <div id="error-data" data-error="{{ error }}"></div>
+            {% endif %}
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('login.static', filename='js/login.js') }}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

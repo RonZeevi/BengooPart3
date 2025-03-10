@@ -1,0 +1,31 @@
+.whoops {
+    position: relative;
+    font-size: 45px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 80px;
+}
+
+.notfound{
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FF8A00;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #FFFFFF;
+    color: #FF8A00;
+    border: 3px solid #FF8A00;
+    border-radius: 12px;
+    padding: 9px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 30%;
+    margin: 75px 0 130px 0;
+}

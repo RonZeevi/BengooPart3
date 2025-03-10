@@ -1,0 +1,196 @@
+.welcome-text {
+    padding-top: 20px;
+    position: relative;
+    color: #FF8A00;
+    font-size: 35px;
+}
+
+.welcome-text h1 {
+    white-space: nowrap;
+    border-right: 4px solid #FF8A00;
+    width: auto;
+    overflow: hidden;
+    animation: typing 3s steps(40, end), blink 0.5s step-end infinite 3s; 
+    margin-top: 95px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Cursor disappears halfway through */
+    }
+}
+
+
+.welcome-side-text {
+    color: dimgray;
+    position: relative;
+    font-size: 25px;
+    
+}
+
+.role-selection {
+    display: flex;
+    justify-content: center;
+    color: #6F6868;
+    gap: 40px;
+    margin: 40px 0;
+    padding-top: 20px;
+}
+
+.role-option {
+    display: grid;
+    justify-content: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid #FF8A00;
+    overflow: hidden;
+    transform-origin: center center;
+    will-change: transform;
+
+}
+
+.role-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    position: relative;
+    left: 30px;
+    top: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    width: 60%;
+
+}
+
+.homepage-login-btn, .homepage-signup-btn {
+    padding: 12px 15px;
+    border-radius: 12px;
+    font-size: 30px;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    width: 25%;
+    margin-top: 15px;
+}
+
+
+.homepage-login-btn {
+    background: #FF8A00;
+    color: #fff;
+    border: none;
+}
+
+.homepage-signup-btn {
+    background: #fff;
+    color: #FF8A00;
+    border: 2px solid #FF8A00;
+}
+
+.homepage-login-btn:hover, .homepage-signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.role-option.selected {
+    box-shadow: 0 8px 12px rgba(255, 138, 0, 0.4);
+    border-color: #FF8A00;
+}
+
+.role-option::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 138, 0, 0.5);
+    transform: scale(0);
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.role-option.selected::after {
+    transform: scale(15);
+    opacity: 1;
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.role-option.shake-animation {
+    animation: shake 0.5s ease-in-out;
+}
+
+.logged-in-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.welcome-message {
+    font-size: 24px;
+    color: dimgray;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 150px;
+}
+
+.continue-learning-btn {
+    background-color: #FF8A00;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.continue-learning-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    background-color: #E67E00;
+}
+
+

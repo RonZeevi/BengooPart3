@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="{{ url_for('navigationbar.static', filename='css/navigationbar.css') }}"/>
+
+<nav>
+    <div class="BGULogo">
+        <a href="/homepage">
+            <img src="static/media/img/logo_Desktop.png" alt="BGU Logo"/>
+        </a>
+    </div>
+    
+    <div class="user-controls">
+        {% if session and 'username' in session and session['username'] %}
+            <a href="{{ url_for('profile.index') }}">
+                {% if user_profile_image %}
+                    <img src="{{ user_profile_image }}" alt="User Profile" class="profile-img">
+                {% else %}
+                    <img src="{{ url_for('static', filename='media/img/Student Profile.jpg') }}" alt="User Profile" class="profile-img">
+                {% endif %}
+            </a>
+            
+            <button onclick="startLearn()" class="startlearn-btn">Start Learning!</button>
+        {% endif %}
+        <button class="aboutus-btn">About</button>
+        {% if session and 'username' in session and session['username'] %}
+            <button onclick="signOut()" class="navsignout-btn">Sign Out</button>
+        {% else %}
+            <button onclick="login()" class="loginnav-btn">Login</button>
+        {% endif %}
+        <button onclick="goBack()" class="back-btn">
+            <img src="static/media/img/arrow-back-empty.png" alt="Back" class="back-icon default-icon">
+            <img src="static/media/img/icons8-back-arrow-100.png" alt="Back" class="back-icon hover-icon">
+        </button>
+    </div>
+</nav>
+
+<script src="{{ url_for('navigationbar.static', filename='js/navigationbar.js') }}"></script>

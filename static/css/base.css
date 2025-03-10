@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFDAAE;
+    transform: scale(80%);
+    transform-origin: top left;
+    width: 125%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.outercontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+}
+
+.whitecontainer {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1200px;
+    height: 810px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 250px;
+    padding-top: 20px;
+    
+}
+
+.innercontainer {
+    background-color: #FFDAAE;
+    border-radius: 25px;
+    width: 35%;
+    min-width: 300px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FormDesign {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-field {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #7f7f7f;
+    padding: 2px;
+    font-size: 20px;
+    color: #333;
+    background: transparent;
+    margin-bottom: 20px;
+}
+
+.input-field:focus {
+    outline: none;
+    border-bottom: 1px solid #333;
+}
+
+.btn {
+    background: #FFFFFF;
+    color: #FF8A00;
+    border: 3px solid #FF8A00;
+    border-radius: 12px;
+    padding: 9px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 60%;
+    margin: 15px 0 20px 0;
+}
+
+.btn:hover {
+    background: #FF8A00;
+    color: #FFFFFF;
+}
+
+
+.CamelAvater {
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    width: auto;
+    height: 100px;
+}
+
+.CamelAvater img {
+    width: 170px;
+    height: auto;
+}
+
+.uppercontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.BGUlogo {
+    position: relative;
+    left: 150px;
+    top: 47px;
+
+}
+
+.BGUlogo img {
+    width: 100px;
+    height: auto;
+}
+
+
+.password-field-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.passvisibility {
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 57%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: transparent;
+}
+
+.passvisibility img {
+    width: 30px;
+    height: auto;
+}
+
+.hyperlink {
+    font-size: 16px;
+    color: #FF8A00;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.hyperlink:hover {
+    text-decoration: underline;
+    color: #e57700;
+}
+
+.disclaimer {
+    color: #7d7d90;
+    font-size: 15px;
+    text-align: center;
+    position: fixed;
+    bottom: -220px;
+    padding-bottom: 10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+}
+
+/* סגנון לחלון קופץ מינימליסטי */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 80px;
+    right: 20px;
+    max-width: 300px;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    direction: rtl;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-right: 4px solid #ff0000;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.modal-content p {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.close {
+    color: #aaa;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.close:hover,
+.close:focus {
+    color: #555;
+}

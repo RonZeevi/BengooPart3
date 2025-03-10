@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Course Access Management' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('profile.static', filename='css/profile.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('courseaccess.static', filename='css/courseaccess.css') }}"/>
+{% endblock %}
+
+{% block page_body_whitecontainer_content %}
+    <div class="uppercontainer">
+        <h1 class="profile-title">Course Access Management</h1>
+    </div>
+{% endblock %}
+
+{% block page_body_innercontainer %}
+    <div class="access-container">
+        <div class="add-user-section">
+            <h3>Add User to Course</h3>
+            <div class="add-user-form">
+                <input type="text" id="username-input" placeholder="Enter username">
+                <button id="add-user-btn">Add User</button>
+            </div>
+            <div id="add-user-message" class="message"></div>
+        </div>
+        
+        <div class="users-section">
+            <h3>Users with Access</h3>
+            <p class="loading">Loading users...</p>
+        </div>
+        
+        <div class="back-section">
+            <button class="btn">Back to Profile</button>
+        </div>
+    </div>
+
+    <input type="hidden" id="course-id" value="{{ course._id }}">
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('courseaccess.static', filename='js/courseaccess.js') }}"></script>
+{% endblock %}

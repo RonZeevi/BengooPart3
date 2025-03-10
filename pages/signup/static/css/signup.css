@@ -1,0 +1,47 @@
+.signup-title {
+    font-size: 45px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 130px;
+    margin-bottom: -23px;
+}
+
+.field-title {
+    font-size: 20px;
+    color: #6F6868;
+    margin-bottom: 5px;
+}
+
+/* Override autofill styles */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #FFDAAE inset !important;
+}
+
+.btn {
+    position: relative;
+    left: 65px;
+}
+
+.role {
+    background: darkgray;
+    color: dimgray;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-align: center;
+    height: 35px;
+    width: 50%;
+    margin-bottom: 10px;
+    position: relative;
+    left: 80px;
+}
+
+.passvisibility {
+    position: absolute;
+    right: 45px;
+    top: 58%;
+}
+
+
+

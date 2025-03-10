@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Sign Up' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('signup.static', filename='css/signup.css') }}"/>
+{% endblock %}
+{% block page_body_whitecontainer_content %}
+    <div class="CamelAvater"><img src="{{ url_for('static', filename='media/img/Camel avater 2 different position.jpg') }}"/></div>
+        <div class="uppercontainer">
+            <h1 class="signup-title">Sign Up</h1>
+        </div>
+{% endblock %}
+
+{% block page_body_innercontainer %}
+
+    <form class="FormDesign" action="{{ url_for('signup.register') }}" method="post">
+        <h1 class="field-title">full name</h1>
+        <input class="input-field" name="fullname" type="text" required>
+
+        <h1 class="field-title">email</h1>
+        <input class="input-field" name="email" type="email" required>
+
+        <h1 class="field-title">username</h1>
+        <input class="input-field" name="username" type="text" required>
+
+        <h1 class="field-title">password</h1>
+        <input class="input-field" name="password" type="password" required>
+        <button type="button" class="passvisibility">
+            <img src="{{ url_for('static', filename='media/img/hide.png') }}"/>
+        </button>
+        
+        <div class="role">Role: {{ "Student" if selected_role == 'student' else "Lecturer" if selected_role == 'lecturer' }}</div>
+        <input type="hidden" name="role" value="{{ selected_role }}">
+
+        <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <a href="{{ url_for('login.index') }}" class="hyperlink">Already have an account? Login</a>
+    
+    {% if error %}
+    <div id="error-data" data-error="{{ error }}"></div>
+    {% endif %}
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('signup.static', filename='js/signup.js') }}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

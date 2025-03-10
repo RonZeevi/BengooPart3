@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Page not found' %}
+
+{% block page_head_css %}
+{#    <link rel="stylesheet" href="{{ url_for('page_error_handlers.static', filename='css/page_error_handlers.css') }}"/>#}
+    <link rel="stylesheet" href="{{ url_for('page_error_handlers.static', filename='css/page_not_found.css') }}"/>
+{% endblock %}
+
+{% block page_body_main %}
+ <div class="outercontainer">
+ <div class="whitecontainer">
+    <h1 class="whoops"> Oops! Looks like you're a bit lost.</h1>
+     <h2 > This page could not be found.</h2>
+     <button type="button" class="btn" onclick="window.location.href='{{ url_for('homepage.index') }}'">Return To Home Page</button>
+    <div class="camel"><img src="static/media/img/Camel Avatar lecturer.jpg" alt="Camel"/></div>
+    <h3 class="notfound">404 NOT FOUND</h3>
+
+ </div>
+     </div>
+{% endblock %}
+
+{% block page_body_js %}
+{#    <script src="{{ url_for('page_error_handlers.static', filename='js/page_error_handlers.js') }}"></script>#}
+    <script src="{{ url_for('page_error_handlers.static', filename='js/page_not_found.js') }}"></script>
+{% endblock %}

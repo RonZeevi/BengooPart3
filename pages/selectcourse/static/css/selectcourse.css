@@ -1,0 +1,78 @@
+body {
+    background-image: url('static/media/img/updateWelcomeBGU6.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom right;
+    background-position-y: 150px;
+    background-size: 70%;
+    height: 650px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 150px;
+}
+
+.content h1 {
+    font-size: 55px;
+    color: #FF8A00;
+    margin-bottom: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #FF8A00;
+    width: auto;
+    animation: typing 3s steps(40, end) 1, blink 0.5s step-end infinite 3s; /* Stop blinking after typing */
+}
+
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.select-label {
+    font-size: 30px;
+    color: dimgray;
+    margin-bottom: 10px;
+}
+
+.course-select {
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    width: 500px;
+}
+
+.course-select option {
+    font-size: 16px;
+}
+
+.btn {
+    width: 200px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.disclaimer {
+    position: fixed;
+    bottom: -260px;
+
+}
+
+
+

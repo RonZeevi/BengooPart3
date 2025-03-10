@@ -1,0 +1,159 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFDAAE;
+}
+
+nav .user-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    bottom: 20px;
+}
+
+nav .user-controls img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #FF8A00;
+}
+
+nav .navsignout-btn {
+    background: none;
+    border: 2px solid #FF8A00;
+    color: #FF8A00;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+nav .navsignout-btn:hover {
+    background: #FF8A00;
+    color: white;
+}
+
+nav .loginnav-btn {
+    background: none;
+    border: 2px solid #FF8A00;
+    color: #FF8A00;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+nav .loginnav-btn:hover {
+    background: #FF8A00;
+    color: white;
+}
+
+nav .aboutus-btn {
+    background: none;
+    border: 2px solid #FF8A00;
+    color: #FF8A00;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+nav .aboutus-btn:hover {
+    background: #FF8A00;
+    color: white;
+}
+
+nav .startlearn-btn {
+    background: none;
+    border: 2px solid #FF8A00;
+    border-radius: 20px;
+    color: #FF8A00;
+    padding: 8px 15px;
+    border-width: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+nav .startlearn-btn:hover {
+    background: #FF8A00;
+    color: white;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 25px;
+    margin-left: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: -2px;
+    right: 15px;
+}
+
+.back-icon {
+    transition: opacity 0.3s ease;
+    position: absolute;
+}
+
+.hover-icon {
+    opacity: 0;
+}
+
+.default-icon {
+    opacity: 1;
+}
+
+.back-btn:hover .default-icon {
+    opacity: 0;
+}
+
+.back-btn:hover .hover-icon {
+    opacity: 1;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.profile-img:hover {
+    transform: scale(1.12);
+}
+
+.user-controls a {
+    display: flex;
+    align-items: center;
+}
+
+.BGULogo img {
+    width: 250px;
+    height: auto;
+    position: relative;
+    bottom: 15px;
+}
+
+
+
+
+

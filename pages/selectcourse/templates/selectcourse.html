@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Course Selection' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('selectcourse.static', filename='css/selectcourse.css') }}"/>
+{% endblock %}
+
+{% block page_body_nav %}
+ {% include ('navigationbar.html') %}
+{% endblock %}
+
+{% block page_body_main %}
+    <div class="outercontainer">
+        <div class="content">
+            <h1>Hello {{ first_name }}, What will we learn today?</h1>
+            <label class="select-label">Select a course</label>
+            <select class="course-select">
+                <option value="בחר קורס">בחירת קורס</option>
+                {% if courses and courses|length > 0 %}
+                    {% for course in courses %}
+                        <option value="{{ course.name }}">{{ course.name }}</option>
+                    {% endfor %}
+                {% else %}
+                    <option value="" disabled>אין קורסים זמינים</option>
+                {% endif %}
+            </select>
+            <button class="btn">Select</button>
+            
+        </div>
+    </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('selectcourse.static', filename='js/selectcourse.js') }}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

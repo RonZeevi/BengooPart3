@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'About' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('aboutus.static', filename='css/aboutus.css') }}"/>
+{% endblock %}
+
+{% block page_body_whitecontainer_content %}
+    <div class="uppercontainer">
+        <h1 class="aboutus-title">About</h1>
+    </div>
+{% endblock %}
+
+{% block page_body_innercontainer %}
+    <div class="team-container">
+        <div class="team-member">
+            <div class="profile-image">
+                <img src="static/media/img/IMG_2519.jpg" alt="Ron Zeevi">
+            </div>
+            <h2 class="member-name">Ron Zeevi</h2>
+            <p class="member-description">IEM Student at Ben-Gurion University</p>
+            <a href="https://www.linkedin.com/in/ron-zeevi/" target="_blank" class="linkedin-link">
+                <img src="static/media/img/linkedin-icon.png" alt="LinkedIn" onerror="this.src='https://cdn-icons-png.flaticon.com/512/174/174857.png'" class="linkedin-icon">
+                LinkedIn Profile
+            </a>
+        </div>
+        
+        <div class="team-member">
+            <div class="profile-image">
+                <img src="static/media/img/ronyprofile.jpg" alt="Rony Kruchakov">
+            </div>
+            <h2 class="member-name">Rony Kruchakov</h2>
+            <p class="member-description">IEM Student at Ben-Gurion University</p>
+            <a href="https://www.linkedin.com/in/ronykruchakov/" target="_blank" class="linkedin-link">
+                <img src="static/media/img/linkedin-icon.png" alt="LinkedIn" onerror="this.src='https://cdn-icons-png.flaticon.com/512/174/174857.png'" class="linkedin-icon">
+                LinkedIn Profile
+            </a>
+        </div>
+    </div>
+    
+    <div class="project-info">
+        <h2 class="project-title">About the Project</h2>
+        <p class="project-description">
+            Our AI-powered platform enhances academic learning with digital, accessible, and efficient study tools. Utilizing Gemini API, it integrates academic forums, past answers, and Speech-To-Text technology. It provides smart answers, homework assistance, and lecture summaries, aiming to make learning more effective for students.
+        </p>
+    </div>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('aboutus.static', filename='js/aboutus.js') }}"></script>
+{% endblock %}

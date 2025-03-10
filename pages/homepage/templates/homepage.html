@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% set page_head_title = 'Homepage' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('homepage.static', filename='css/homepage.css') }}"/>
+{% endblock %}
+{% block page_body_main %}
+<div class="outercontainer">
+<div class="whitecontainer">
+{% block page_body_whitecontainer_content %}
+        <div class="welcome-text">
+            <h1>Welcome to BENGOO</h1>
+        </div>
+        <div class="welcome-side-text">
+            <h3> Your Academic Chatbot!</h3>
+        </div>
+        
+        {% if not session.get('logged_in') %}
+            <div class="role-selection">
+                <div class="role-option student" data-role="student">
+                    <div class="role-icon">👨‍🎓</div>
+                    <h1>Student</h1>
+                </div>
+                <div class="role-option lecturer" data-role="lecturer">
+                    <div class="role-icon">👨‍🏫</div>
+                    <h1>Lecturer</h1>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="homepage-login-btn">Login</button>
+                <button class="homepage-signup-btn">Sign Up</button>
+            </div>
+        {% else %}
+            <div class="logged-in-actions">
+                <p class="welcome-message">Already logged in! How about we dive back into learning? 🤓</p>
+                <button class="continue-learning-btn" onclick="window.location.href='{{ url_for('selectcourse.index') }}'">Continue Learning </button>
+            </div>
+        {% endif %}
+{% endblock %}
+</div>
+    </div>
+
+{% endblock %}
+
+{% block page_body_innercontainer %}
+
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('homepage.static', filename='js/homepage.js') }}"></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,204 @@
+.access-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.course-name {
+    color: #FF8A00;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.add-user-section {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.add-user-section h3, .users-section h3 {
+    color: #FF8A00;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.add-user-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.add-user-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.add-user-form button, #add-user-btn {
+    background-color: #FF8A00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.add-user-form button:hover, #add-user-btn:hover {
+    background-color: #e67e00;
+}
+
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.users-section {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    overflow-x: auto;
+}
+
+.users-list {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.users-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.users-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.users-list::-webkit-scrollbar-thumb {
+    background: #FF8A00;
+    border-radius: 10px;
+}
+
+.users-list::-webkit-scrollbar-thumb:hover {
+    background: #e67e00;
+}
+
+.users-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-list th, .users-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.users-list th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    color: #555;
+}
+
+.users-list tr:hover {
+    background-color: #f9f9f9;
+}
+
+.remove-user-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.remove-user-btn:hover {
+    background-color: #c82333;
+}
+
+.back-section {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background: #FFFFFF;
+    color: #FF8A00;
+    border: 3px solid #FF8A00;
+    border-radius: 12px;
+    padding: 9px;
+    font-size: 23px;
+    cursor: pointer;
+    font-weight: bolder;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 30%;
+    
+}
+
+.btn:hover {
+    background: #FF8A00;
+    color: #FFFFFF;
+}
+
+
+.no-users {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.innercontainer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+.profile-title {
+    color: #FF8A00;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+

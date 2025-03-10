@@ -1,0 +1,135 @@
+{#
+{#Base page variables:#}
+{#-- page_lang | default: 'en'#}
+{#-- page_head_title_author | default: 'Barak Pinchovski'#}
+{#-- page_head_title | default: 'Flask skeleton project'#}
+{##}
+{##}
+{#
+{#Base page blocks:#}
+{#- head#}
+{#-- page_head#}
+{#-- page_head_meta#}
+{#--- page_head_meta_extra#}
+{#-- page_head_css#}
+{##}
+{#- body#}
+{#-- page_body_content#}
+{#--- page_body_header#}
+{#---- page_body_header_content#}
+{#----- page_body_header_content__main_menu#}
+{#------ page_body_header_content__main_menu_content#}
+{#------- page_body_header_content__main_menu_content_links#}
+{#--- page_body_main#}
+{#---- page_body_main_content#}
+{#--- page_body_footer#}
+{#---- page_body_footer_content#}
+{#-- page_body_js#}
+{# #}
+{#*********************************************************************************************#}
+<!DOCTYPE html>
+ <html lang="{{ page_lang|default("en", true) }}">
+    <head>
+    {% block page_head %}
+         {# Title #}
+        <title>{{ page_head_title_author|default('Bengoo', true) }} | {{ page_head_title|default('Flask skeleton project', true) }}</title>
+
+        {# Meta tags #}
+        {% block page_head_meta %}
+            <base href="/"/>
+            <meta charset="UTF-8"/>
+            <meta name="author" content="Ron Zeevi | Rony Kruchakov "/>
+            <meta name="description" content="Flask skeleton project as a base to start developing on"/>
+            <meta name="keywords" content="flask, lean, skeleton, project, structure, environment, setup, template, fullstack, web, development, app, university, education"/>
+            {% block page_head_meta_extra %}{% endblock %}
+        {% endblock %}
+
+        {# favicon #}
+        <link rel="icon" href="{{ url_for('static', filename='media/img/favicon/camel.png') }}"/>
+
+         {# Base #}
+        <base href="/"/>
+
+        {# CSS #}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
+        {% block page_head_css %}{% endblock %}
+    {% endblock %}
+    </head>
+    <body>
+        {% block page_body_content %}
+
+            {# Navigation #}
+            {% block page_body_nav %}
+            {% include 'navigationbar.html' %}
+            {% endblock %}
+
+            {# Global error modal #}
+            <div id="errorModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="errorMessage"></p>
+                </div>
+            </div>
+
+            {# Main #}
+            {% block page_body_main %}
+                <div class="outercontainer">
+                     <div class="whitecontainer">
+                         {% block page_body_whitecontainer_content %}
+
+                         {% endblock %}
+                        <div class="uppercontainer">
+                        <div class="innercontainer">
+                {% block page_body_innercontainer %}
+                  {% endblock %}
+                        </div>
+
+                        </div>
+                </div>
+                </div>
+            {% endblock %}
+
+            {# Footer #}
+            {% block page_body_footer %}
+                  {% block page_body_footer_content %}
+                      {% include ('footer.html') %}
+                  {% endblock %}
+            {% endblock %}
+
+        {% endblock %}
+
+        {# JS #}
+        <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+        {% block page_body_js %}
+        {% endblock %}
+    </body>
+</html>
+
+{#****************************************************************************************************#}
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <meta name="description" content="Login Page">#}
+{#    <title>Login</title>#}
+{#    <link rel="stylesheet" href="../styles/base.css">#}
+{#    <link rel="stylesheet" href="../styles/LoginPage.css">#}
+{#</head>#}
+{#<body>#}
+{#<div class="outercontainer">#}
+{#    <div class="whitecontainer">#}
+{#                <div class="uppercontainer">#}
+{#                        <h1 class="login-title">Login</h1>#}
+{#                </div>#}
+{#        <div class="innercontainer">#}
+{##}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
+{#{% include('footer.html') %}#}
+{#<script src="../js/LoginPage.js"></script>#}
+{#</body>#}
+{#</html>#}
+{##}
+{##}
